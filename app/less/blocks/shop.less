@@ -1,5 +1,35 @@
 .shop {
     padding-top: 95px;
+    padding-bottom: 110px;
+
+    position: relative;
+    &:before {
+        position: absolute;
+        content: '';
+        top: -330px;
+        bottom: auto;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 984px;
+        z-index: -1;
+        background-image: url("../img/bg/bg-lines.png"), url("../img/bg/bg-water.jpg");
+        background-repeat: repeat-y, no-repeat;
+        background-position: center, center;
+        background-size: auto, cover;
+    }
+}
+
+.shop-slider-wrapper {
+    height: 565px;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.shop-slider-special-holder {
+    position: absolute;
+    left: 0;
+    right: -85px;
 }
 
 .shop-slider {
@@ -9,6 +39,36 @@
     justify-content: space-between;
 }
 
+.shopSlider-controls {
+    position: relative;
+}
+
+.shopSlider-arrow {
+    width: 40px;
+    height: 48px;
+    padding: 15px;
+    cursor: pointer;
+
+    position: absolute;
+    bottom: calc(120px + 80px);
+    z-index: 9;
+    img {
+        vertical-align: top;
+    }
+}
+
+.shopSlider-arrow--left {
+    left: -70px;
+    transform: translateX(-100%);
+
+    
+}
+
+.shopSlider-arrow--right {
+    right: -70px;
+    transform: translateX(100%);
+}
+
 .shop-link-wrapper {
     display: flex;
     justify-content: center;
@@ -16,8 +76,9 @@
 
 .board{
     position: relative;
-    width: 350px;
+    width: 435px;
     height: 435px;
+    margin-top: 130px;
 }
 
 .board__img-holder {

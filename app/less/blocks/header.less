@@ -7,6 +7,16 @@
     position: absolute;
     right: -50px;
     top: 58px;
+
+    @media (max-width: 1400px) {
+        right: 30px;
+        top: 170px;
+
+        .site-desc__content {
+            color: #fff;
+        }
+    }
+
 }
 
 .site-desc__content {
@@ -27,23 +37,16 @@
 
 }
 
-.header-social {
+.header-social-wrapper {
     width: 20px;
     position: absolute;
-    right: -51px;
+    right: -45px;
     bottom: 0;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-
+    @media (max-width: 1400px) {
+        right: 30px;
+        bottom: 30px;
+    } 
 }
 
-.header-social__item {
-    margin-bottom: 34px;
 
-    &:last-child {
-        margin-bottom: 0;
-    }
-}

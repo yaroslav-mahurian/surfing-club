@@ -11,34 +11,6 @@ img {
     height: auto;
 }
 
-.line {
-    &:hover {
-        color: rgba(11, 12, 17, 0.9);
-        text-decoration: none;
-    }
-
-    &:after {
-        content: '';
-        width: 0px;
-        height: 1px;
-        background-color: rgba(11, 12, 17, 0.9);
-        display: block;
-
-        position: absolute;
-        bottom: -3px;
-        left: -2px;
-        right: 0;
-        transition: width .2s linear;
-
-    }
-
-    &:hover {
-        &:after {
-            width: 100%;
-        }
-    }
-}
-
 .container {
     width: 100%;
     padding-left: 15px;

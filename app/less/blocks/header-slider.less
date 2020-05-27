@@ -2,9 +2,36 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding-top: 45px;
+    padding-top: 0;
     padding-bottom: 95px;
+
+    @media (min-width: 1254px) {
+        padding-top: 45px;
+    }
 }
+
+.header-social-wrapper {
+    margin-top: 25px;
+    margin-bottom: 25px;
+   
+    @media (min-width: 1254px) {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        z-index: 9;
+
+        right: 17px;
+        top: 350px;
+    } 
+
+    @media (min-width: 1400px) {
+        right: -45px;
+        top: 400px;
+
+    }
+
+}
+
 
 #headerSlider.owl-carousel .owl-stage-outer {
     overflow: visible;
@@ -17,14 +44,18 @@
 }
 
 .slide-item__img {
-    width: 1016px;
-    height: 572px;
-
+    width: 100%;
+    height: 372px;
     box-shadow: -16px 25px 65px rgba(11, 12, 17, 0.2);
-    
+        
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    @media (min-width: 1254px) {
+        width: 1016px;
+        height: 572px;
+    }
 }
 
 .slide-item__img--bg-1 {
@@ -33,22 +64,53 @@
 
 
 .slide-item__desc {
-    width: 500px;
+    
+    background-color: #fff;
+    padding: 25px;
+    padding-bottom: 10px;
+    min-width: 260px;
+    max-width: 680px;
     position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    bottom: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: -16px 0 65px rgba(11, 12, 17, 0.2);
+    text-align: center;
+
+    @media (min-width: 1254px) {
+        background-color: transparent;
+        width: 500px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        bottom: auto;
+        box-shadow: none;
+        transform: translateY(-50%);
+        padding: 0;
+        text-align: left;
+    }
 }
 
 .slide-item__heading {
     color: #0b0c11;
     font-family: 'Playfair Display', serif;
-    font-size: 62px;
+    font-size: 22px;
     font-weight: 700;
-    line-height: 64px;
+    line-height: 1;
+    margin-bottom: 10px;
+
+    @media (min-width: 920px) {
+        font-size: 42px;
+    }
+    
+    @media (min-width: 1254px) {
+        font-size: 62px;
+        margin-bottom: 20px;
+    }
+
     span {
         display: block;
-        margin-bottom: 20px;    
+        margin-bottom: 10px;    
         color: rgba(93, 168, 239, 0.9);
         font-family: "League Spartan", sans-serif;
         font-size: 9px;
@@ -56,11 +118,15 @@
         line-height: 1;
         text-transform: uppercase;
         letter-spacing: 5.4px;
+
+        @media (min-width: 1254px) {
+            margin-bottom: 16px;    
+        }
+
     }
 }
 
 .slide-item__text {
-    width: 390px;
     color: #8f8f8f;
     font-size: 14px;
     font-weight: 300;
@@ -69,18 +135,31 @@
     letter-spacing: 0.35px;
     margin-top: 14px;
 
+    @media (min-width: 992px) {
+        width: 390px;
+    }
 }
 
 
 .slide-controls {
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: 50%;
+    bottom: -75px;
+    z-index: 9;
+    width: 81px;
+
     display: flex;
     align-items: center;
-    width: 81px;
     justify-content: space-between;
-    z-index: 9;
+    
+    transform: translateX(-50%);
+
+    @media (min-width: 1254px) {
+        bottom: 0;
+        left: 0;
+        transform: translateX(0%);
+        
+    }
 }
 
 .slide-controls-number {

@@ -11,7 +11,15 @@ headerSlider.owlCarousel({
     items: 1,
     //loop: true,
     dots: false,
-    smartSpeed: 1000,
+    smartSpeed: 500,
+    responsive: {
+        0: {
+            smartSpeed: 500,
+        },
+        1254: {
+            smartSpeed: 1000,
+        }
+    }
 });
 
 

@@ -6,10 +6,52 @@ body {
     background-size: initial;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.line {
+    &:hover {
+        color: rgba(11, 12, 17, 0.9);
+        text-decoration: none;
+    }
+
+    &:after {
+        content: '';
+        width: 0px;
+        height: 1px;
+        background-color: rgba(11, 12, 17, 0.9);
+        display: block;
+
+        position: absolute;
+        bottom: -3px;
+        left: -2px;
+        right: 0;
+        transition: width .2s linear;
+
+    }
+
+    &:hover {
+        &:after {
+            width: 100%;
+        }
+    }
+}
+
 .container {
-    width: 1224px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+   
+
+    @media (min-width: 1254px) {
+        width: 1224px;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .flex-end {
@@ -29,7 +71,6 @@ body {
 
 
 .read-more-link {
-    margin-left: 115px;
     color: #333333;
     font-family: "League Spartan", sans-serif;
     text-decoration: none;
@@ -41,19 +82,26 @@ body {
     position: relative;
     padding-bottom: 10px;
     display: inline-block;
+    cursor: pointer;
 
     &:after {
         position: absolute;
-        left: 0;
+        left: -2px;
         right: 0;
         bottom: 0;
         content: '';
         height: 2px;
         background-color: rgba(93, 168, 239, 0.7);
+        transition: bottom .2s linear;
     }
 
     &:hover {
         text-decoration: none;
+        color: #5da8ef;
+
+        &:after {
+            bottom: 3px;
+        }
     }
 
     &--m0 {
